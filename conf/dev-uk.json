@@ -1,0 +1,14 @@
+{
+	"minified":false,
+	"deploy":true,
+	"root":"/home/nodes/desks/desk-uk-dev",
+	"name":"desk-uk-dev",
+	"port":8134,
+	"src":"sources",
+	"args":"--app uk",
+	"mode":"dev",
+	"uri":"desk-uk.dev.ubik.be",
+	"node":"0.10.2",
+	"updateSubmodule":true,
+	"npmInstall":false
+}

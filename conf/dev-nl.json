@@ -1,0 +1,14 @@
+{
+	"minified":false,
+	"deploy":true,
+	"root":"/home/nodes/desks/desk-nl-dev",
+	"name":"desk-nl-dev",
+	"port":8133,
+	"src":"sources",
+	"args":"--app nl",
+	"mode":"dev",
+	"uri":"desk-nl.dev.ubik.be",
+	"node":"0.10.2",
+	"updateSubmodule":true,
+	"npmInstall":false
+}

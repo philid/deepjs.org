@@ -1,0 +1,26 @@
+{
+  "name": "push-dev",
+  "author": "Smart asbl",
+  "version": "0.5.4",
+  "contributors": [],
+  "maintainers": [
+    {
+      "name": "Gilles Coomans",
+      "email": "gilles.coomans@gmail.com"
+    },
+    {
+      "name": "Philippe Delabye",
+      "email": "phil@chemicalrules.net"
+    }
+  ],
+  "dependencies": {
+    "pintura": ">=0.3.0",
+    "perstore": ">=0.3.0",
+    "requirejs": ">=1.0.0",
+    "rql": ">=0.3.1",
+    "mongodb": ">=0.9.3",
+    "swig": ">=0.9.2",
+    "optimist": ">=0.3.1",
+    "marked": "~0.2.9"
+  }
+}
