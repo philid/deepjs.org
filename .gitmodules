@@ -1,0 +1,12 @@
+[submodule "node_modules/deep"]
+	path = node_modules/deep
+	url = ssh://git@dev.ubik.be/deep
+[submodule "node_modules/deep-ui"]
+	path = node_modules/deep-ui
+	url = ssh://git@dev.ubik.be/deep-ui
+[submodule "node_modules/autobahn"]
+	path = node_modules/autobahn
+	url = ssh://git@dev.ubik.be/autobahn
+[submodule "node_modules/deep-swig"]
+	path = node_modules/deep-swig
+	url = ssh://git@dev.ubik.be/deep-swig
