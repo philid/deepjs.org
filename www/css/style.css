@@ -24,6 +24,7 @@ body {
 	font-family: 'Strait', sans-serif;
 }
 .deep-js {
+	text-shadow: 1px 1px 4px #555;
 	color:#b1d9d3;
 	margin-left:10px;
 	font-size: 30pt;
@@ -40,15 +41,34 @@ body {
 	vertical-align: 60%;
 }
 .deep-baseline-brackets {
+	text-shadow: 0px 1px 4px #555;
 	font-size: 28pt;
 	color:#b1d9d3;
 }
 #main-menu {
 	margin-left:0px;
-	margin-bottom:85px;
+	padding-bottom:25px;
 }
 
-#main-menu li 
+.menu {
+}
+
+.menu a, .menu a:visited {
+	color:white;
+}
+
+.menu a:link, .menu a:visited 
+{
+   float: left;
+   font-size: 15px;
+   line-height: 14px;
+   margin: 0 10px 4px 10px;
+   text-decoration: none;
+   padding-left:5px;
+   padding-right:5px;
+}	
+
+.menu li 
 {
 	font-family: 'Pathway Gothic One', sans-serif;
    margin: 0;
@@ -57,34 +77,18 @@ body {
    list-style-type: none;
 }
 
-#main-menu a:link, #footer a:visited 
-{
-   float: left;
-   font-size: 15px;
-   line-height: 14px;
-   margin: 0 10px 4px 10px;
-   text-decoration: none;
-}	
-
-#main-menu a {
-	color: #FFFFFF;
-}
-
-#main-menu li.active a {
+.menu li.active a {
 	color: #CCC;
 }
 
 #current-version {
-	text-align:right;
+	float:right;
 	font-family: 'Pathway Gothic One', sans-serif;
 	font-size: 11pt;
 	color:#000;
-	width:100%;
 	padding:0px;
 	margin:0px;
-	position:relative;
-	top:-17px;
-	right:3px;
+	margin-right:15px;
 }
 
 
@@ -92,12 +96,14 @@ body {
 	box-shadow: 0px 2px 7px #333;
 	/*width:800px;*/
 	background-color: #FFFFFF;
+
 	padding:20px;
-	padding-top:0px;
+	padding-top:20px;
 	padding-left:50px;
+
 	border-radius: 15px;
+
 	margin-bottom:20px;
-	margin-left:0px;
 }
 
 #footer {
@@ -110,34 +116,6 @@ body {
 	padding-left:40px;
 	background-color: #222222;
 	height:17px;
-}
-
-#footer a {
-	color:#FFFFFF;
-
-}
-
-#footer li 
-{
-	font-family: 'Pathway Gothic One', sans-serif;
-   margin: 0;
-   padding: 0;
-   display: inline;
-   list-style-type: none;
-}
-
-#footer a:link, #footer a:visited 
-{
-   float: left;
-   font-size: 15px;
-   line-height: 14px;
-   margin: 0 10px 4px 10px;
-   text-decoration: none;
-}	
-
-
-#footer li.active a {
-	color: #CCC;
 }
 
 .copyright {

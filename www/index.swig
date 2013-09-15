@@ -23,7 +23,7 @@
 	<div id="header">
 		<h1 ><span class="deep-title">deep</span><span class="deep-js">js</span> <span class="deep-baseline-brackets">{</span><span class="deep-baseline">{{ baseline|randomItem }}</span><span class="deep-baseline-brackets">}</span></h1>
 	</div>
-	<div id="main-menu">
+	<div id="main-menu" class="menu">
 		<ul>
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
 			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/tutos">tutorials</a></li>
@@ -33,14 +33,16 @@
 			<li class="{% if menuActive == 'community' %} active {% endif %}"><a href="/community">community</a></li>
 			<li class="{% if menuActive == 'about' %} active {% endif %}"><a href="/about">about</a></li>
 		</ul>
-	</div>
-	<div id="content">
 		<div id="current-version">
 			current version : <strong>0.9.5</strong>
 		</div>
+	</div>	
+	&nbsp;
+	<div id="content">
+		
 		{{ content|raw }}
 	</div>
-	<div id="footer">
+	<div id="footer" class="menu">
 		<ul>
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
 			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/tutos">tutorials</a></li>
