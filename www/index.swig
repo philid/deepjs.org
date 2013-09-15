@@ -47,6 +47,9 @@
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
 			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/tutos">tutorials</a></li>
 			<li class="{% if menuActive == 'API' %} active {% endif %}"><a href="/API/">API</a></li>
+			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deep">download</a></li>
+			<li class="{% if menuActive == 'modules' %} active {% endif %}"><a href="/modules">modules</a></li>
+			<li class="{% if menuActive == 'community' %} active {% endif %}"><a href="/community">community</a></li>
 			<li class="{% if menuActive == 'about' %} active {% endif %}"><a href="/about">about</a></li>
 		</ul>
 	</div>
