@@ -1,5 +1,5 @@
 body {
-	background-color: #008f1e;
+	background-color: #0098b1;
 	margin:0px;
 	/*font-family: 'Georgia'*/
 	font-family: "Georgia";
@@ -18,14 +18,14 @@ body {
 	font-weight:normal;
 }
 .deep-title {
-	text-shadow: 2px 2px 10px #555;
+	text-shadow: 1px 1px 3px #444;
 	color:#FFFFFF;
 	font-size: 90pt;
 	font-family: 'Strait', sans-serif;
 }
 .deep-js {
-	text-shadow: 1px 1px 4px #555;
-	color:#b1d9d3;
+	text-shadow: 1px 1px 2px #555;
+	color:#b1d3d9;
 	margin-left:10px;
 	font-size: 30pt;
 	font-family: 'Strait', sans-serif;
@@ -41,9 +41,9 @@ body {
 	vertical-align: 60%;
 }
 .deep-baseline-brackets {
-	text-shadow: 0px 1px 4px #555;
+	text-shadow: 0px 1px 2px #555;
 	font-size: 28pt;
-	color:#b1d9d3;
+	color:#b1d3d9;
 }
 #main-menu {
 	margin-left:0px;
@@ -101,7 +101,7 @@ body {
 	padding-top:5px;
 	padding-left:50px;
 
-	border-radius: 15px;
+	border-radius: 8px;
 
 	margin-bottom:20px;
 }
@@ -110,7 +110,7 @@ body {
 	/*width:800px;*/
 	font-family: 'Pathway Gothic One', sans-serif;
 	font-size: 12pt;
-	border-radius: 15px;
+	border-radius: 8px;
 	padding:20px;
 	color:#FFFFFF;
 	padding-left:40px;
@@ -131,7 +131,7 @@ body {
 }
 /*
 pre {
-	border-radius: 15px;
+	border-radius: 8px;
 	padding-top:30px;
 	box-shadow: 0px 2px 7px #333;
 	background-color: #EFEFEF;

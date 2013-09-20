@@ -7,8 +7,14 @@ var connect = require("connect");
 var urlrouter = require('urlrouter');
 
 require("autobahn/stores/json");
-require("deep-swig/node")();
-require("./marked-store");
+require("deep-swig/node")({
+	language:function(){
+		return smart.language;
+	}
+});
+require("deep-markdown");
+
+// git describe --abbrev=0 --tags       // knowing last tag
 
 var app = connect()
 .use(urlrouter(function (app)
@@ -19,35 +25,38 @@ var app = connect()
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"home",
-				baseline:"json::./baselines.json",
-				content:["marked::./tutos/first.md"]
+				baseline:"json::./www/baselines.json",
+				content:["marked::./node_modules/deep/README.md"]
 			}
 		};
 		return next();
 	});
 //______________________________________________ TUTOS ROOT
-	app.get('/tutos', function (req, res, next)
+	app.get('/tutorials', function (req, res, next)
 	{
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"tutos",
-				baseline:"json::./baselines.json",
-				content:["marked::./tutos/nodejs/simple.md"]
+				baseline:"json::./www/baselines.json",
+				content:["marked::./node_modules/deep/DOCS/first.md"]
 			}
 		};
 		return next();
 	});
 //______________________________________________ TUTOS
-	app.get('/tutos/:tuto([a-zA-Z\-\/]+)', function (req, res, next)
+	app.get('/tutorials/:tuto([a-zA-Z\-\/]+)', function (req, res, next)
 	{
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"tutos",
-				baseline:"json::./baselines.json",
-				content:["marked::./tutos/"+req.params.tuto+".md"]
+				baseline:"json::./www/baselines.json",
+				content:["marked::./node_modules/deep/DOCS/"+req.params.tuto+".md"]
 			}
 		};
 		return next();
@@ -58,41 +67,45 @@ var app = connect()
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"about",
-				baseline:"json::./baselines.json",
+				baseline:"json::./www/baselines.json",
 				content:["marked::./www/about.md"]
 			}
 		};
 		return next();
 	});
-//______________________________________________ ABOUT
+//______________________________________________ COMMUNITY
 	app.get('/community', function (req, res, next)
 	{
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"community",
-				baseline:"json::./baselines.json",
+				baseline:"json::./www/baselines.json",
 				content:["marked::./www/community.md"]
 			}
 		};
 		return next();
 	});
-//______________________________________________ ABOUT
+//______________________________________________ MODULES
 	app.get('/modules', function (req, res, next)
 	{
 		req.view = {
 			page:"swig::./www/index.swig",
 			context:{
+				version:"json::./www/version.json",
 				menuActive:"modules",
-				baseline:"json::./baselines.json",
+				baseline:"json::./www/baselines.json",
 				content:["marked::./www/modules.md"]
 			}
 		};
 		return next();
 	});
 }))
-.use(function(req, res, next){
+.use(function(req, res, next)
+{
 	if(req.view)
 		deep(req.view)
 		.deepLoad()

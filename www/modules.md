@@ -1,14 +1,29 @@
 Associated Modules
 ================
 
+Stores and protocoles
+==========
 
-Stores
+	- deep-fs
+	- deep-mongo
+	- deep-couchDB
+	- deep-jquery-ajax
+	- deep-node-http (client)
+	- deep-local-storage
+	- deep-translation
+
+
+	- deep-jsonquery
+	- deep-jsonselect
+	- deep-jsonpath
+
+
+Templates Engine
 ==========
 
 	- deep-swig
-	- deep-fs
-	- deep-mongo
-	- deep-ajax
+	- deep-plates
+	- deep-markdown
 
 
 Views
