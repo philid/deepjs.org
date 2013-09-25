@@ -10,3 +10,6 @@
 [submodule "node_modules/deep-swig"]
 	path = node_modules/deep-swig
 	url = ssh://git@dev.ubik.be/deep-swig
+[submodule "node_modules/deep-localisation"]
+	path = node_modules/deep-localisation
+	url = ssh://git@dev.ubik.be/deep-localisation
