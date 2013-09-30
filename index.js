@@ -3,47 +3,50 @@
  */
 
 var deep = require("deep/deep");
+deep.globals.rootPath = __dirname+"/";
+
 var connect = require("connect");
 var mappers = require("deep-route/mappers");
-require("autobahn/stores/json");
+require("deep-node-fs/json").createDefault();
 require("deep-markdown");
-require("deep-swig/node")();
+require("deep-swig")();
 // git describe --abbrev=0 --tags       // knowing last tag
+//deep.protocoles.markdown.options.rootPath = deep.globals.rootPath;
 
 var map = {
 	"/":{
 		context:{
-			content:["marked::./node_modules/deep/README.md"]
+			content:["markdown::./node_modules/deep/README.md"]
 		}
 	},
 	"/tutorials":{
 		context:{
 			menuActive:"tutos",
-			content:["marked::./node_modules/deep/DOCS/first.md"]
+			content:["markdown::./node_modules/deep/DOCS/menu.md", "markdown::./node_modules/deep/DOCS/first.md"]
 		}
 	},
 	'/tutorials/:tuto([a-zA-Z\-\/]+)':{
 		context:{
 			menuActive:"tutos",
-			content:["marked::./node_modules/deep/DOCS/{tuto}.md"]
+			content:["markdown::./node_modules/deep/DOCS/{tuto}.md"]
 		}
 	},
 	'/about':{
 		context:{
 			menuActive:"about",
-			content:["marked::./www/about.md"]
+			content:["markdown::./www/about.md"]
 		}
 	},
 	'/community':{
 		context:{
 			menuActive:"community",
-			content:["marked::./www/community.md"]
+			content:["markdown::./www/community.md"]
 		}
 	},
 	'/modules':{
 		context:{
 			menuActive:"modules",
-			content:["marked::./www/modules.md"]
+			content:["markdown::./www/modules.md"]
 		}	
 	}
 };
@@ -71,4 +74,5 @@ var app = connect()
 	res.end("error : 404");
 })
 .listen(3000);
+
 
