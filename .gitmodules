@@ -13,3 +13,6 @@
 [submodule "node_modules/deep-localisation"]
 	path = node_modules/deep-localisation
 	url = ssh://git@dev.ubik.be/deep-localisation
+[submodule "node_modules/deep-jquery-ajax"]
+	path = node_modules/deep-jquery-ajax
+	url = git@github.com:nomocas/deep-jquery-ajax.git
