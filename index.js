@@ -2,19 +2,21 @@
  * @author Gilles Coomans <gilles.coomans@gmail.com>
  */
 
-var deep = require("deep/deep");
+var deep = require("deep");
 deep.globals.rootPath = __dirname+"/";
-
-var connect = require("connect");
-var mappers = require("deep-route/mappers");
 require("deep-node-fs/json").createDefault();
 require("deep-markdown");
-require("deep-swig")();
-// git describe --abbrev=0 --tags       // knowing last tag
 //deep.protocoles.markdown.options.rootPath = deep.globals.rootPath;
+require("deep-swig")();
+// git describe --abbrev=0  --tags       // knowing last tag
+
+var express = require('express');
+var mappers = require("autobahn/middleware/html");
+
 
 var map = {
 	"/":{
+		page:"swig::./www/index.swig",
 		context:{
 			content:["markdown::./node_modules/deep/README.md"]
 		}
@@ -51,6 +53,7 @@ var map = {
 	}
 };
 
+
 deep.utils.sheet({
 	"dq.bottom::/*":{
 		page:"swig::./www/index.swig",
@@ -63,16 +66,40 @@ deep.utils.sheet({
 	}
 }, map);
 
-
-
-var app = connect()
-.use(mappers.getHTMLMaper(map))
-.use(connect.static(__dirname + '/www', { maxAge: 86400000, redirect:false }))
-.use("/API", connect.static(__dirname + '/node_modules/deep/DOCS/apidocs', { maxAge: 86400000, redirect:false }))
+var app = express()
+//.use(require('connect-repl')())
+.use(mappers.simpleMap(map))
+.use(express.static(__dirname + '/www', { maxAge: 86400000, redirect:false }))
+.use("/API", express.static(__dirname + '/node_modules/deep/DOCS/apidocs', { maxAge: 86400000, redirect:false }))
 .use(function(req, res, next){
 	res.writeHead(200, {'Content-Type': 'text/html'});
 	res.end("error : 404");
 })
 .listen(3000);
+
+// /_____________________________________________
+
+
+var net = require("net"),
+    repl = require("repl");
+
+connections = 0;
+net.createServer(function (socket) {
+  connections += 1;
+  repl.start({
+    prompt: "node via TCP socket> ",
+    input: socket,
+    output: socket
+  }).on('exit', function() {
+    socket.end();
+  });
+}).listen(5001);
+
+repl.start({
+  prompt: "node via stdin> ",
+  input: process.stdin,
+  output: process.stdout
+});
+
 
 
