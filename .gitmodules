@@ -7,3 +7,6 @@ url=git@github.com:nomocas/deep-swig.git
 [submodule "node_modules/deep-node-fs"]
 	path = node_modules/deep-node-fs
 	url = git@github.com:nomocas/deep-node-fs.git
+[submodule "node_modules/deep"]
+	path = node_modules/deep
+	url = git@github.com:nomocas/deepjs.git
