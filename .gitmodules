@@ -1,6 +1,3 @@
-[submodule "node_modules/deep"]
-	path = node_modules/deep
-	url = ssh://git@dev.ubik.be/deep
 [submodule "node_modules/autobahn"]
 	path = node_modules/autobahn
 	url = ssh://git@dev.ubik.be/autobahn
