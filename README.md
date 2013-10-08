@@ -10,8 +10,9 @@ It's also an example on how produce a simple static site with deep tools
 
 Install
 ===
-
+```shell
 git clone git@github.com:nomocas/deepjs.org.git
 cd deepjs.org
 git submodule update --init
 npm install swig
+```
