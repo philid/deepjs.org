@@ -7,7 +7,6 @@ deep.globals.rootPath = __dirname+"/";
 require("deep-node-fs/json").createDefault();
 require("deep-markdown");
 require("deep-swig")();
-// git describe --abbrev=0  --tags       // knowing last tag
 
 var express = require('express');
 var htmlMappers = require("autobahn/middleware/html");
@@ -52,7 +51,7 @@ var map = {
 	}
 };
 
-deep.utils.sheet({
+var mySheet = {
 	"dq.bottom::/*":{
 		page:"swig::./www/index.swig",
 		context:{
@@ -60,8 +59,9 @@ deep.utils.sheet({
 			baseline:"json::./www/baselines.json"
 		}
 	}
-}, map);
+};
 
+deep.utils.sheet(mySheet, map);
 
 var statics = {
 	"/":[ { path:__dirname + '/www', options:{ maxAge: 86400000, redirect:false } } ],
@@ -69,6 +69,8 @@ var statics = {
 };
 
 var app = express();
+
+
 
 staticMappers.map(statics, app);
 
