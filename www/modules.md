@@ -1,39 +1,30 @@
-Associated Modules
-================
 
-Stores and protocoles
-==========
-
-	- deep-fs
-	- deep-mongo
-	- deep-couchDB
-	- deep-jquery-ajax
-	- deep-node-http (client)
-	- deep-local-storage
-	- deep-translation
+## Associated Modules
 
 
-	- deep-jsonquery
-	- deep-jsonselect
-	- deep-jsonpath
+## Stores and protocoles
+
+	* [deep-node-fs](https://github.com/nomocas/deep-node-fs)
+	* [deep-mongo](https://github.com/nomocas/deep-mongo)
+	* deep-jquery-ajax
+	* deep-node-http (client)
+	* deep-local-storage
+	* deep-localisation
 
 
-Templates Engine
-==========
 
-	- deep-swig
-	- deep-plates
-	- deep-markdown
+## Templates Engine
 
-
-Views
-==========
-
-	- deep-ui
+	* deep-swig
+	* deep-markdown
 
 
-Nodejs
-==========
+## Views
 
-	- autobahn
+	* deep-ui
+
+
+## Nodejs
+
+	* autobahn
 	

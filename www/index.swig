@@ -26,7 +26,7 @@
 	<div id="main-menu" class="menu">
 		<ul>
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
-			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/tutorials">tutorials</a></li>
+			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/DOCS/">tutorials</a></li>
 			<li class="{% if menuActive == 'API' %} active {% endif %}"><a href="/API/">API</a></li>
 			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deep">download</a></li>
 			<li class="{% if menuActive == 'modules' %} active {% endif %}"><a href="/modules">modules</a></li>

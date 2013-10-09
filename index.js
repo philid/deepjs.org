@@ -19,16 +19,16 @@ var map = {
 			content:["markdown::./node_modules/deep/README.md"]
 		}
 	},
-	"/tutorials":{
+	"/DOCS":{
 		context:{
 			menuActive:"tutos",
-			content:["markdown::./node_modules/deep/DOCS/menu.md", "markdown::./node_modules/deep/DOCS/first.md"]
+			content:["markdown::./node_modules/deep/DOCS/menu.md", "markdown::./node_modules/deep/DOCS/tutorials.md"]
 		}
 	},
-	'/tutorials/:tuto([a-zA-Z\-\/]+)':{
+	'/DOCS/:tuto(([a-zA-Z\-\/]+)\.md)':{
 		context:{
 			menuActive:"tutos",
-			content:["markdown::./node_modules/deep/DOCS/{tuto}.md"]
+			content:["markdown::./node_modules/deep/DOCS/{tuto}"]
 		}
 	},
 	'/about':{
