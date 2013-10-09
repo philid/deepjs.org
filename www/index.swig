@@ -17,7 +17,7 @@
 <body>
 	<div class="github-fork-ribbon-wrapper right">
         <div class="github-fork-ribbon">
-            <a href="https://github.com/nomocas/deep">Fork me on GitHub</a>
+            <a href="https://github.com/nomocas/deepjs">Fork me on GitHub</a>
         </div>
     </div>
 	<div id="header">
@@ -28,7 +28,7 @@
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
 			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/DOCS/">tutorials</a></li>
 			<li class="{% if menuActive == 'API' %} active {% endif %}"><a href="/API/">API</a></li>
-			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deep">download</a></li>
+			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deepjs">download</a></li>
 			<li class="{% if menuActive == 'modules' %} active {% endif %}"><a href="/modules">modules</a></li>
 			<li class="{% if menuActive == 'community' %} active {% endif %}"><a href="/community">community</a></li>
 			<li class="{% if menuActive == 'about' %} active {% endif %}"><a href="/about">about</a></li>
@@ -44,9 +44,9 @@
 	<div id="footer" class="menu">
 		<ul>
 			<li class="{% if menuActive == 'home' %} active {% endif %}"><a href="/">home</a></li>
-			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/tutorials">tutorials</a></li>
+			<li class="{% if menuActive == 'tutos' %} active {% endif %}"><a href="/DOCS/">tutorials</a></li>
 			<li class="{% if menuActive == 'API' %} active {% endif %}"><a href="/API/">API</a></li>
-			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deep">download</a></li>
+			<li class="{% if menuActive == 'download' %} active {% endif %}"><a href="https://github.com/nomocas/deepjs">download</a></li>
 			<li class="{% if menuActive == 'modules' %} active {% endif %}"><a href="/modules">modules</a></li>
 			<li class="{% if menuActive == 'community' %} active {% endif %}"><a href="/community">community</a></li>
 			<li class="{% if menuActive == 'about' %} active {% endif %}"><a href="/about">about</a></li>

@@ -1,15 +1,14 @@
-
-## Associated Modules
-
+Associated Modules
+======
 
 ## Stores and protocoles
 
-	* [deep-node-fs](https://github.com/nomocas/deep-node-fs)
-	* [deep-mongo](https://github.com/nomocas/deep-mongo)
-	* deep-jquery-ajax
-	* deep-node-http (client)
-	* deep-local-storage
-	* deep-localisation
+* [deep-node-fs](https://github.com/nomocas/deep-node-fs)
+* [deep-mongo](https://github.com/nomocas/deep-mongo)
+* deep-jquery-ajax
+* deep-node-http (client)
+* deep-local-storage
+* deep-localisation
 
 
 
